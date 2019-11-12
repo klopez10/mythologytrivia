@@ -1,54 +1,65 @@
-/* Styling. */
+/* Overall Styling. */
+@font-face {
+  font-family: 'roman-sd';
+  src: url('../fonts/roman-sd.ttf') format('truetype');
+}
+
 body {
-    background-image: url(https://images.unsplash.com/photo-1522787345986-d5c7885a889e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
-   background-size: cover;
-   margin: 100px;
+  background-image: url(../resources/GreekRuins.jpeg);
+  background-size: cover;
+  margin: 100px;
    
-   text-align: center;
-   color: white;
- }
+  text-align: center;
+}
  
- h1, a {
-   text-transform: uppercase;
-   color: #ff6961;
- }
+h1, a {
+  color: #ff6961;
+  font-family: 'roman-sd', serif;
+
+}
  
- #app section {
-   background-color: rgba(250, 250, 250, 0.85);
-   margin: 20px;
-   padding: 20px;
-   border-radius: 5px;
-   
-   color: black;
- }
- 
+#app section {
+  background-color: rgba(250, 250, 250, 0.85);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Heading. */
+ h1 {
+  font-size: 3em;
+  word-spacing: -15px;
+}
+
+/* Question.  */
  #app section.question {
    padding: 80px;
- }
- 
- #app section.refresh {
+}
+
+/* Refresh Page Button. */
+#app section.refresh {
+  position: fixed;
+  left: 50%;
+  margin-left: -115px;
+  margin-top: 0;
    
-   position: fixed;
-   left: 50%;
-   margin-left: -115px;
-   margin-top: 0;
+  border: #ff6961 solid 5px;
+  background-color: rgba(250, 250, 250, 0.85);
+}
+
+#app a {
+  padding: 20px 40px 20px 40px;
    
-   border: #ff6961 solid 5px;
-   background-color: rgba(250, 250, 250, 0.85);
- }
+  color: #ff6961;
+  word-spacing: -5px;
+
+}
  
- #app a {
-   padding: 20px 40px 20px 40px;
-   
-   color: #ff6961;
-   font-weight: bold;
- }
+#app section.refresh:hover {
+  border: white solid 5px;
+  background-color: rgba(255, 105, 97, 0.85);
+}
  
- #app section.refresh:hover {
-   border: white solid 5px;
-   background-color: rgba(255, 105, 97, 0.85);
- }
- 
- #app a:hover {
-   color: white;
- }
+#app a:hover {
+  color: white;
+}

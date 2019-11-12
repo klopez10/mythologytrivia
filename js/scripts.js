@@ -14,17 +14,17 @@ const showStuff = (data) => {
   // Single Data Entry Loop. 
   for (i=0; i < data.results.length; i++) {
     
-      // Template.
-      let template =
-          `<h1>Mythology Trivia</h1>
+    // Template.
+    let template =
+      `<h1>Mythology Trivia</h1>
 
-           <section class="question">
-            <p>${data.results[i].question}</p>
-           </section>
+      <section class="question">
+        <p>${data.results[i].question}</p>
+      </section>
 
-           <section class="refresh">
-            <a onClick="window.location.reload()">Next Question</a>
-           </section>`; //Refresh Code Source. https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click.
+      <section class="refresh">
+        <a onClick="window.location.reload()">Next Question</a>
+      </section>`;
     
       // Show Data Within Template.
       $('#app').append(template);
