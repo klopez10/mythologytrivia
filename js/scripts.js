@@ -18,11 +18,22 @@ const showStuff = (data) => {
     let template =
       `<h1>Mythology Trivia</h1>
 
-      <section class="question">
-        <p>${data.results[i].question}</p>
-      </section>
+      <main class="scene scene--card">
+        <div class="card">
+          <div class="card__face card__face--front">
+            <section id="question">
+              <p>${data.results[i].question}</p>
+            </section>
+          </div>
+          <div class="card__face card__face--back">
+            <section id="answer">
+              <p>${data.results[i].correct_answer}</p>
+            </section>
+          </div>
+        </div>
+      </main>
 
-      <section class="refresh">
+      <section id="refresh">
         <a onClick="window.location.reload()">Next Question</a>
       </section>`;
     
@@ -31,6 +42,12 @@ const showStuff = (data) => {
     
   } // End of Loop.
     
+  var card = document.querySelector('.card');
+  
+  card.addEventListener( 'click', function() {
+    card.classList.toggle('is-flipped');
+  });
+
 }; // End of 'showStuff' Function.
 
 // JSON From API. 

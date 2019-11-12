@@ -10,6 +10,8 @@ body {
   margin: 100px;
    
   text-align: center;
+
+  cursor: default;
 }
  
 h1, a {
@@ -32,12 +34,34 @@ h1, a {
 }
 
 /* Question.  */
- #app section.question {
+ #app section#question, #app section#answer {
    padding: 80px;
 }
 
+/* Flip. */
+.card {
+  transition: transform 1.5s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+}
+
 /* Refresh Page Button. */
-#app section.refresh {
+#app section#refresh {
   position: fixed;
   left: 50%;
   margin-left: -115px;
@@ -52,10 +76,9 @@ h1, a {
    
   color: #ff6961;
   word-spacing: -5px;
-
 }
  
-#app section.refresh:hover {
+#app section#refresh:hover {
   border: white solid 5px;
   background-color: rgba(255, 105, 97, 0.85);
 }
