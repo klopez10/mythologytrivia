@@ -18,20 +18,21 @@ const showStuff = (data) => {
     let template =
       `<h1>Mythology Trivia</h1>
 
-      <main class="scene scene--card">
-        <div class="card">
-          <div class="card__face card__face--front">
+      <label>
+        <input type="checkbox"  />
+        <main class="card">
+          <div class="front">            
             <section id="question">
               <p>${data.results[i].question}</p>
             </section>
           </div>
-          <div class="card__face card__face--back">
+          <div class="back">
             <section id="answer">
               <p>${data.results[i].correct_answer}</p>
             </section>
           </div>
-        </div>
-      </main>
+        </main>
+      </label>
 
       <section id="refresh">
         <a onClick="window.location.reload()">Next Question</a>
@@ -48,7 +49,7 @@ const showStuff = (data) => {
     card.classList.toggle('is-flipped');
   });
 
-}; // End of 'showStuff' Function.
+}; // End of 'showStuff' Function. 
 
 // JSON From API. 
 $.getJSON( getStuff, showStuff);

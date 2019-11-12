@@ -19,13 +19,6 @@ h1, a {
   font-family: 'roman-sd', serif;
 
 }
- 
-#app section {
-  background-color: rgba(250, 250, 250, 0.85);
-  margin: 20px;
-  padding: 20px;
-  border-radius: 5px;
-}
 
 /* Heading. */
  h1 {
@@ -39,35 +32,67 @@ h1, a {
 }
 
 /* Flip. */
-.card {
-  transition: transform 1.5s;
+label {
   transform-style: preserve-3d;
+  display: block;
+  height: 200px;
+}
+
+.card {
   position: relative;
-}
-
-.card.is-flipped {
-  transform: rotateY(180deg);
-}
-
-.card__face {
-  position: absolute;
-  width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 800ms;
+  z-index: 20;
 }
 
-.card__face--back {
-  transform: rotateY(180deg);
+.card div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  text-align: center;
+  margin-top: 0;
+  backface-visibility: hidden;
+  border-radius: 5px;
+}
+
+.card .back {
+  background: #222;
+  color: white;
+  transform: rotateX(180deg);
+}
+
+label:hover .card {
+  transform: rotateX(20deg);
+  box-shadow: 0 20px 20px rgba(50,50,50,.2);
+}
+
+input {
+  display: none;
+}
+
+:checked + .card {
+  transform: rotateX(180deg);
+}
+
+label:hover :checked + .card {
+  transform: rotateX(160deg);
+  box-shadow: 0 20px 20px rgba(255,255,255,.2);
 }
 
 /* Refresh Page Button. */
 #app section#refresh {
   position: fixed;
   left: 50%;
-  margin-left: -115px;
-  margin-top: 0;
+  margin: 20px;
+  padding: 20px;
+  margin-left: -140px;
+  margin-top: 20px;
    
   border: #ff6961 solid 5px;
+  border-radius: 5px;
   background-color: rgba(250, 250, 250, 0.85);
 }
 
