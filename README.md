@@ -8,3 +8,7 @@
 
 ## Resources.
 * [Refresh Page Button](https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click).
+
+## Next Styling Steps.
+* [CSS Flip Animation](https://davidwalsh.name/css-flip).
+* [Bubble Coloring Button](https://codepen.io/comehope/pen/eKqZjy?editors=1100).
