@@ -42,12 +42,6 @@ const showStuff = (data) => {
       $('#app').append(template);
     
   } // End of Loop.
-    
-  var card = document.querySelector('.card');
-  
-  card.addEventListener( 'click', function() {
-    card.classList.toggle('is-flipped');
-  });
 
 }; // End of 'showStuff' Function. 
 
