@@ -9,3 +9,6 @@
 ## Resources.
 * [Refresh Page Button](https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click).
 * [Card Flip](https://codepen.io/RuudBurger/pen/bwjry).
+
+## Next Step.
+* Switch to [true/false](https://opentdb.com/api.php?amount=1&category=20&type=boolean).
